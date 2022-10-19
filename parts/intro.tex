@@ -3,7 +3,7 @@
 \newmdenv[innerlinewidth=0.5pt, roundcorner=4pt,linecolor=teal,backgroundcolor=teal,innerleftmargin=6pt,
     innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt,leftmargin=-9pt,rightmargin=-9pt]{mybox}
 
-Temporal Difference (TD) learning is the process of estimating the value of each state using the differences in the value of successive states. This is done with the Bellman equation:
+Temporal Difference (TD) learning is the process of estimating the value of each state in a Markov Reward Process (MRP) using the differences in the value of successive states. This is done with the Bellman equation:
 \begin{center}
     \includegraphics[scale=0.4]{parts/intro/bellman}
 \end{center}
@@ -16,7 +16,7 @@ TD may learn arbitrarily bad value functions under the \emph{Deadly Triad} condi
 \begin{center}
     \includegraphics[scale=0.4]{parts/intro/threestatedivergence}
 \end{center}
-A popular mitigation strategy in the literature is to \emph{regularize} the learned parameters, commonly by penalizing their magnitude. This is supposed to work:
+A popular mitigation strategy in the literature is to \emph{regularize} the learned parameters, commonly by penalizing their magnitude. Regularization is supposed to work like this:
 \begin{center}
     \includegraphics[scale=0.4]{parts/intro/regworks}
 \end{center}
