@@ -1,0 +1,82 @@
+% Source: http://www.brian-amberg.de/uni/poster/
+\documentclass[landscape,paperwidth=96in,paperheight=48in,fontscale=0.2]{baposter}
+\usepackage[utf8]{inputenc}
+\usepackage{fontspec,amsfonts,microtype}
+\usepackage{hyperref,url}   % hyperlinks
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{}      % microtypography
+\usepackage{nicefrac,mathtools,xfrac,bm,amsthm}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usetikzlibrary{pgfplots.groupplots}
+\pgfplotsset{compat=1.18}
+\usepackage{tabularx}
+\usepackage{comment}
+\usepackage{fnpct}
+\usepackage{caption}
+\usepackage{comment}
+\usepackage[framemethod=tikz]{mdframed}
+
+\DeclareMathOperator*{\minimize}{minimize}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{enumitem}\setlist{nolistsep,leftmargin=*}
+\usepackage{graphicx}
+
+\usepackage{tikz}
+\usetikzlibrary[topaths]
+\newcount\mycount
+
+\setmainfont{Lato}[
+  SizeFeatures={Size=18},
+]
+\newfontfamily\titlefont{Raleway-SemiBold}[
+  Path = ./fonts/raleway/,
+  SizeFeatures={Size=32},
+]
+\newfontfamily\headerfont{Raleway-Bold}[
+  Path = ./fonts/raleway/,
+  SizeFeatures={Size=17},
+]
+
+\definecolor{headerColor}{rgb}{0.14, .62, .92}
+
+\input{tricks}
+
+\begin{document}
+
+\begin{poster}{
+    grid=true,
+    colspacing=.5in,
+    headerColorOne=headerColor, borderColor=headerColor,
+    headerborder=none, headershape=rectangle,
+    headershade=plain, headerFontColor=white, textborder=none,
+    background=plain, bgColorOne=white, boxshade=none,
+    headerheight=0.15\textheight,
+    headerfont=\headerfont,
+    columns=3
+  }{
+    \includegraphics[height=0.11\textheight]{images/neurips-logo}
+  }{
+    {{\titlefont The Pitfalls of Regularization in Off-Policy TD Learning }}
+  }{\vspace{2mm}\large
+    Gaurav Manek, J. Zico Kolter \\
+    School of Computer Science, Carnegie Mellon University \\
+    \texttt{<gmanek, zkolter>@cs.cmu.edu}
+  }{\includegraphics[height=0.11\textheight]{images/cmu-logo}}
+
+  \headerbox{Off-Policy TD Learning is Unstable}
+  {name=intro,column=0,row=0}{\input{parts/intro}}
+
+  \headerbox{Example \#1: Models may be \textit{vacuous}}
+  {name=randomnet,column=1,row=0}{\input{parts/vacuous}}
+
+  %\headerbox{Empirical Result: Damped Pendulum}
+  %{name=pendulum,column=2,row=0}{\input{pendulum}}
+
+  %\headerbox{Empirical Result: Damped $n$-link Pendulum}
+  %{name=nlinkpendulum,column=2,below=pendulum}{\input{nlinkpendulum}}
+
+
+\end{poster}
+\end{document}
