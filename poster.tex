@@ -46,7 +46,7 @@
 \begin{document}
 
 \begin{poster}{
-    grid=true,
+    %grid=true,
     colspacing=.5in,
     headerColorOne=headerColor, borderColor=headerColor,
     headerborder=none, headershape=rectangle,
@@ -78,7 +78,10 @@
   {name=nn,column=2,row=0}{\input{parts/nn}}
 
   \headerbox{\#4: Emphatic-TD can't fix this.}
-  {name=emphatic,column=2,below=nn}{\input{parts/emphatic}}
+  {name=emphatic,column=2,row=0.425}{\input{parts/emphatic}}
+
+  \headerbox{What can we do about this?}
+  {name=concl,column=2,row=0.875}{\input{parts/conclusion}}
 
 
 \end{poster}
