@@ -1,5 +1,5 @@
 % Source: http://www.brian-amberg.de/uni/poster/
-\documentclass[landscape,paperwidth=96in,paperheight=48in,fontscale=0.2]{baposter}
+\documentclass[landscape,paperwidth=96in,paperheight=42in,fontscale=0.2]{baposter}
 \usepackage[utf8]{inputenc}
 \usepackage{fontspec,amsfonts,microtype}
 \usepackage{hyperref,url}   % hyperlinks
@@ -78,10 +78,10 @@
   {name=nn,column=2,row=0}{\input{parts/nn}}
 
   \headerbox{\#4: Emphatic-TD can't fix this.}
-  {name=emphatic,column=2,row=0.425}{\input{parts/emphatic}}
+  {name=emphatic,column=2,below=nn}{\input{parts/emphatic}}
 
   \headerbox{What can we do about this?}
-  {name=concl,column=2,row=0.875}{\input{parts/conclusion}}
+  {name=concl,column=2,below=emphatic}{\input{parts/conclusion}}
 
 
 \end{poster}

@@ -1,7 +1,8 @@
-Emphatic-TD (ETD), proposed by Sutton et al. in 2015, is the most promising way to mitigate off-policy training instability. It works by estimating the transitive dependency between states (called the \emph{followon trace}) and uses that to reweight TD updates to appear on-policy.
-
+Emphatic-TD (ETD), proposed by Sutton et al. in 2015, estimates the transitive dependency between states (called the \emph{followon trace}) and uses that to reweight TD updates to appear on-policy.
+\vspace{-.11in}
 \begin{center}
     \includegraphics[scale=0.4]{parts/emphatic/emphatic.png}
 \end{center}
-Estimating the followon trace is very difficult. Modern ETD algorithms do this using a form of reversed TD, which makes it vulnerable to regularization bias.
-All trained models exhibit a bump in error at similar levels of regularization, showing that this divergence is not an artifact of poor initialization.
+\vspace{-.11in}
+Estimating the followon trace is very difficult. Modern ETD algorithms do this using a form of reversed TD, which makes it vulnerable to regularization bias, as we show above.
+\vspace{-.3in}

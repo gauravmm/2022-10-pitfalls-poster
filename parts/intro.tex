@@ -3,24 +3,22 @@
 \newmdenv[innerlinewidth=0.5pt, roundcorner=4pt,linecolor=teal,backgroundcolor=teal,innerleftmargin=6pt,
     innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt,leftmargin=-9pt,rightmargin=-9pt]{mybox}
 
-Temporal Difference (TD) learning is the process of estimating the value of each state in a Markov Reward Process (MRP) using the differences in the value of successive states. This is done with the Bellman equation:
+Temporal Difference (TD) learning estimates the value function of a Markov Reward Process (MRP) using samples of successive differences. This is done with the Bellman equation:
 \begin{center}
     \includegraphics[scale=0.4]{parts/intro/bellman}
 \end{center}\vspace{-.1in}
-TD may learn arbitrarily bad value functions under the \emph{Deadly Triad} conditions:
-\begin{enumerate}
-    \item Bootstrapping (learning from your own output)
-    \item Function approximation
-    \item Off-policy updates
-\end{enumerate}\vspace{-.15in}
+TD may learn arbitrarily bad value functions under \emph{Deadly Triad} conditions:
+bootstrapping (learning from your own output),
+function approximation, and
+off-policy updates.
+\vspace{-.11in}
 \begin{center}
     \includegraphics[scale=0.4]{parts/intro/threestatedivergence}
 \end{center}\vspace{-.1in}
-A popular mitigation strategy in the literature is to \emph{regularize} the learned parameters, commonly by penalizing their magnitude. Regularization is supposed to work like this:
+Regularization is a popular mitigation, and is supposed to work like this:
 \begin{center}
     \includegraphics[scale=0.4]{parts/intro/regworks}
 \end{center}
-Regularization is commonly adopted in theory and practice because it allows TD learning to work under changing distributions. However, in this work we show that:
 \begin{mybox}
     {\headerfont Regularization doesn't always work!}
     \vspace{.5em}
